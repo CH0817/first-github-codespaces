@@ -1,0 +1,21 @@
+{
+  "name": "Flutter Development",
+  "image": "ghcr.io/cirruslabs/flutter:stable",
+  "forwardPorts": [8080],
+  "portsAttributes": {
+    "8080": {
+      "label": "Flutter Web Preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Dart-Code.flutter",
+        "Dart-Code.dart-code",
+        "Google.geminicodeassist"
+      ]
+    }
+  },
+  "postCreateCommand": "flutter config --enable-web && flutter doctor"
+}
